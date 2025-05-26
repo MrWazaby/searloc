@@ -1,4 +1,6 @@
 import { bangs } from "./bang";
+import { fetchAndStoreSearxngInstances } from "./searxng";
+import { getRandomElement } from "./utils";
 import "./global.css";
 
 function noSearchDefaultPageRender() {
@@ -44,14 +46,19 @@ function noSearchDefaultPageRender() {
   });
 }
 
-function getDefaultSearch() {
+async function getDefaultSearch() : Promise<{ d: string; u: string } | undefined> {
+  const urls = await fetchAndStoreSearxngInstances();
+  const instance = getRandomElement(urls);
+  if (!instance) {
+    return undefined;
+  }
   return {
-    d: "priv.au",
-    u: "https://priv.au/search?q={{{s}}}",
+    d: instance.replace(/^https?:\/\//, "").replace(/\/$/, ""),
+    u: instance + "search?q={{{s}}}",
   }
 }
 
-function getBangredirectUrl() {
+async function getBangredirectUrl() {
   const url = new URL(window.location.href);
   const query = url.searchParams.get("q")?.trim() ?? "";
   if (!query) {
@@ -62,7 +69,7 @@ function getBangredirectUrl() {
   const match = query.match(/!!(\S+)/i);
 
   const bangCandidate = match?.[1]?.toLowerCase();
-  const selectedBang = bangs.find((b) => b.t === bangCandidate) ?? getDefaultSearch();
+  const selectedBang = bangs.find((b) => b.t === bangCandidate) ?? await getDefaultSearch();
  
   // Remove the first bang from the query
   const cleanQuery = query.replace(/!!\S+\s*/i, "").trim();
@@ -83,8 +90,8 @@ function getBangredirectUrl() {
   return searchUrl;
 }
 
-function doRedirect() {
-  const searchUrl = getBangredirectUrl();
+async function doRedirect() {
+  const searchUrl = await getBangredirectUrl();
   if (!searchUrl) return;
   window.location.replace(searchUrl);
 }

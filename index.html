@@ -1,17 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/search.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Searloc</title>
+    <link rel="icon" type="image/svg+xml" href="/search.svg" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <meta
       name="description"
       content="A fast, local randomizer for searXNG instances and for !!external bang users"
     />
-  </head>
-  <body style="background-color: transparent">
-    <div id="app"></div>
+</head>
+<body>
+    <header>
+        <div class="header-links">
+            <a href="#" class="info-link"><i class="fas fa-info-circle"></i> About</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <h1 class="logo">Searloc</h1>
+            <form action="/" method="get" class="search-box">
+                <input type="text" name="q" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Searloc - 0.1.0 — A fast, local randomizer for searXNG instances and for !!external bang users</p>
+            <p>
+                <a href="https://codeberg.org/wazaby/searloc" target="_blank">Code source</a> | 
+                <a href="https://codeberg.org/wazaby/searloc/issues" target="_blank">Report an issue</a> | 
+                <a href="/about.html#legal-notice">Legal notices</a> | 
+                <a href="https://searx.space/" target="_blank">Instances reference</a>
+            </p>
+        </div>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
-  </body>
+</body>
 </html>

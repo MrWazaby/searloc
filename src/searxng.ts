@@ -16,7 +16,7 @@ type SearxngInstance = {
     }
 }
 
-const COOKIE_NAME = "searx_instances";
+const COOKIE_NAME = "searxng_instances";
 const COOKIE_MAX_AGE = 24 * 60 * 60; // 1 day in seconds
 
 async function fetchAndStoreSearxngInstances(): Promise<{}> {

@@ -1,6 +1,6 @@
 # Searloc
 
-Welcome to Searloc, a decentralized search project focused on privacy. By redirecting you search across multiple SearxNG instances, Searloc ensures no single point of control. It operates without server-side processing, using only HTML, CSS, and JavaScript, and includes no telemetry or trackers. Bangs search are handled locally, keeping your data private. 
+Welcome to Searloc, a decentralized search project focused on privacy. By redirecting your search across multiple SearxNG instances, Searloc ensures no single point of control. It operates without server-side processing, using only HTML, CSS, and JavaScript, and includes no telemetry or trackers. Bangs search are handled locally, keeping your data private. 
 
 ## How to use it 
 To use Searloc, simply visit https://searloc.net and enter your search query.

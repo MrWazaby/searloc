@@ -29,6 +29,12 @@ This will start a local development server. You can also lint the code with:
 npm run lint
 ```
 
+## Get Help
+- Contact us on Matrix searloc:matrix.org
+- If appropriate, [open an issue](https://codeberg.org/wazaby/searloc/issues) on Codeberg.
+
+See [the code of conduct](code_of_conduct.md) befor contacting us.
+
 ## License
 Searloc is lisenced under the MIT License. You can view the full license text in the LICENSE file in the repository.
 

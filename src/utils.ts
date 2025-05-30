@@ -1,13 +1,24 @@
-function setCookie(name: string, value: string, maxAge: number) {
-  document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)};max-age=${maxAge};path=/`;
+function setLocalStorage(name: string, value: string, maxAge: number) {
+  // Store the value and expiration time as a JSON string
+  const expiresAt = Date.now() + maxAge * 1000;
+  localStorage.setItem(name, JSON.stringify({ value, expiresAt }));
 }
 
-function getCookie(name: string): string | undefined {
-  const cookies = document.cookie.split("; ").map(v => v.split("="));
-  for (const [key, val] of cookies) {
-    if (decodeURIComponent(key) === name) return decodeURIComponent(val);
+function getLocalStorage(name: string): string | undefined {
+  const item = localStorage.getItem(name);
+  if (!item) return undefined;
+  try {
+    const { value, expiresAt } = JSON.parse(item);
+    if (typeof expiresAt === "number" && Date.now() > expiresAt) {
+      localStorage.removeItem(name); // Remove expired item
+      return undefined;
+    }
+    return value;
+  } catch {
+    // If parsing fails, remove the corrupted entry
+    localStorage.removeItem(name);
+    return undefined;
   }
-  return undefined;
 }
 
 function getRandomElement(urlMap: Record<string, string>): string | undefined {
@@ -17,4 +28,4 @@ function getRandomElement(urlMap: Record<string, string>): string | undefined {
   return urlMap[urls[randomIndex]];
 }
 
-export { setCookie, getCookie, getRandomElement };
+export { setLocalStorage, getLocalStorage, getRandomElement };

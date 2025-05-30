@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from "./utils";
+import { getLocalStorage, setLocalStorage } from "./utils";
 
 type SearxngInstance = {
     network_type: string;
@@ -16,15 +16,15 @@ type SearxngInstance = {
     }
 }
 
-const COOKIE_NAME = "searxng_instances";
-const COOKIE_MAX_AGE = 24 * 60 * 60; // 1 day in seconds
+const STORAGE_NAME = "searxng_instances";
+const STORAGE_MAX_AGE = 24 * 60 * 60; // 1 day in seconds
 
 async function fetchAndStoreSearxngInstances(): Promise<{}> {
   // If cookie exists, return parsed value
-  const cookie = getCookie(COOKIE_NAME);
-  if (cookie) {
+  const storage = getLocalStorage(STORAGE_NAME);
+  if (storage) {
     try {
-      return JSON.parse(cookie);
+      return JSON.parse(storage);
     } catch {
       // fallback to refetch if cookie is corrupted
     }
@@ -50,7 +50,7 @@ async function fetchAndStoreSearxngInstances(): Promise<{}> {
     }
   });
 
-  setCookie(COOKIE_NAME, JSON.stringify(urlMap), COOKIE_MAX_AGE);
+  setLocalStorage(STORAGE_NAME, JSON.stringify(urlMap), STORAGE_MAX_AGE);
   return urlMap;
 }
 

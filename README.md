@@ -5,25 +5,15 @@ Welcome to Searloc, a decentralized search project focused on privacy. By redire
 ## How to use it 
 To use Searloc, simply visit https://searloc.net and enter your search query.
 
-You can also set Searloc as your default search engine in your browser. Here are the instructions for some popular browsers:
+The URL for searching is `https://searloc.net/?q=%s`.
+
+You can also set Searloc as your default search engine in your browser. Here are the steps for popular browsers:
 
 ### Chrome
-1. Open Chrome settings.
-2. Scroll down to "Search engine" and click on "Manage search engines."
-3. Click "Add" next to "Other search engines."
-4. Fill in the following details:
-   - **Search engine**: Searloc
-   - **Keyword**: searloc
-   - **Query**: 
-```
-https://searloc.net?q=%s
-```
-5. Click "Add" to save.
+[Check the knowledge base](https://support.google.com/chrome/answer/95426?hl=en)
 
 ### Firefox
-1. Open Firefox settings.
-2. Scroll down to "Search" and click on "Find more search engines."
-3. Search for "Searloc" and click on the link to add it.
+[Check the knowledge base](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for information on how to contribute to Searloc.

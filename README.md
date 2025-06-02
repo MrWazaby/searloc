@@ -3,9 +3,9 @@
 Welcome to Searloc, a decentralized search project focused on privacy. By redirecting your search across multiple SearxNG instances, Searloc ensures no single point of control. It operates without server-side processing, using only HTML, CSS, and JavaScript, and includes no telemetry or trackers. Bangs search are handled locally, keeping your data private. 
 
 ## How to use it 
-To use Searloc, simply visit https://searloc.net and enter your search query.
+To use Searloc, simply visit https://searloc.org and enter your search query.
 
-The URL for searching is `https://searloc.net/?q=%s`.
+The URL for searching is `https://searloc.org/?q=%s`.
 
 You can also set Searloc as your default search engine in your browser. Here are the steps for popular browsers:
 

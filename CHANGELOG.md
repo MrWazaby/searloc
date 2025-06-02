@@ -1,3 +1,11 @@
+## 0.1.1 (2025-06-02)
+
+### Fix
+
+- **domain**: switch to searloc.org
+- **cz**: update index.html version on bump
+- **about**: hide about link
+
 ## 0.1.0 (2025-06-02)
 
 ### Feat

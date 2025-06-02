@@ -31,11 +31,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: v22.x
+      
+      - name: Install dependencies
+        run: npm install --include=dev
 
       - name: Build Node assets
-        env:
-          CI: true
-          SITE_URL: ${{ inputs.site-url }}
         run: npm run build
 
 # Please do not touch the following action

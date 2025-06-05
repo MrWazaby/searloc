@@ -1,3 +1,7 @@
+import i18next from 'i18next';
+import HttpApi from 'i18next-http-backend';
+import langDetect from 'i18next-browser-languagedetector';
+
 function setLocalStorage(name: string, value: string, maxAge: number) {
   // Store the value and expiration time as a JSON string
   const expiresAt = Date.now() + maxAge * 1000;
@@ -28,4 +32,21 @@ function getRandomElement(urlMap: Record<string, string>): string | undefined {
   return urlMap[urls[randomIndex]];
 }
 
-export { setLocalStorage, getLocalStorage, getRandomElement };
+function transalteApp() {
+  i18next
+  .use(HttpApi)
+  .use(langDetect)
+  .init({
+    supportedLngs: ['en', 'fr'],
+    fallbackLng: 'en',
+    backend: {
+      loadPath: '/locales/{{lng}}/translation.json'
+    }
+  }, function(err, t) {
+    document.querySelectorAll('[data-i18n]').forEach(function(elem) {
+      elem.innerHTML = i18next.t(elem.getAttribute('data-i18n'));
+    });
+  });
+}
+
+export { setLocalStorage, getLocalStorage, getRandomElement, transalteApp };

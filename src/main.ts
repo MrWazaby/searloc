@@ -1,6 +1,6 @@
 import { bangs } from "./bang";
 import { fetchAndStoreSearxngInstances } from "./searxng";
-import { getRandomElement } from "./utils";
+import { getRandomElement,  transalteApp } from "./utils";
 
 async function getDefaultSearch() : Promise<{ d: string; u: string } | undefined> {
   const urls = await fetchAndStoreSearxngInstances();
@@ -57,4 +57,5 @@ async function doRedirect() {
   window.location.replace(searchUrl);
 }
 
+transalteApp();
 doRedirect();

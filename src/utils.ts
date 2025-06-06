@@ -42,9 +42,14 @@ function transalteApp() {
     backend: {
       loadPath: '/locales/{{lng}}/translation.json'
     }
-  }, function(err, t) {
+  }, function(err) {
+    if (err) {
+      console.error('i18next initialization failed:', err);
+      return;
+    }
     document.querySelectorAll('[data-i18n]').forEach(function(elem) {
-      elem.innerHTML = i18next.t(elem.getAttribute('data-i18n'));
+      const key = elem.getAttribute('data-i18n') ?? "";
+      elem.innerHTML = i18next.t(key);
     });
   });
 }

@@ -42,3 +42,4 @@ Searloc is lisenced under the MIT License. You can view the full license text in
 - [SearxNG](https://github.com/searxng/searxng) for providing the search engine framework and the inspiration for the design.
 - [Searx.space](https://searx.space) for the instances list ans rating.
 - [Unduck](https://github.com/t3dotgg/unduck) for the base source code this project is forked on.
+- [Logodust](https://logodust.com) for the base logo design.

@@ -1,5 +1,5 @@
 import { fetchAndStoreSearxngInstances } from "./searxng";
-import { getRandomElement,  transalteApp } from "./utils";
+import { getRandomElement } from "./utils";
 
 type Bang = {
   s: string;

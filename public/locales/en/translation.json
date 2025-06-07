@@ -4,5 +4,6 @@
     "source": "Source code",
     "issue": "Report an issue",
     "legal": "Legal notices",
-    "instances_references": "Instances reference"
+    "instances_references": "Instances reference",
+    "search_placeholder": "Search..."
 }

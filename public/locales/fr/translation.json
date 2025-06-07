@@ -4,5 +4,6 @@
     "source": "Code source",
     "issue": "Signaler un problème",
     "legal": "Mentions légales",
-    "instances_references": "Référence des instances"
+    "instances_references": "Référence des instances",
+    "search_placeholder": "Recherche..."
 }

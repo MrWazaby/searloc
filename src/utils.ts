@@ -51,6 +51,10 @@ function transalteApp() {
       const key = elem.getAttribute('data-i18n') ?? "";
       elem.innerHTML = i18next.t(key);
     });
+    const input = document.querySelector('input[name="q"]');
+    if (input) {
+      input.setAttribute('placeholder', i18next.t('search_placeholder'));
+    }
   });
 }
 

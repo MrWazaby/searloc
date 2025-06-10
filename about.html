@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searloc</title>
+    <title>About — Searloc</title>
     <link rel="icon" type="image/svg+xml" href="/search.svg" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="search" type="application/opensearchdescription+xml" title="Searloc" href="/opensearch.xml" />
     <meta
       name="description"
-      content="A fast, local randomizer for searXNG instances and for !!external bang users"
+      content="About Searloc: A fast, local randomizer for searXNG instances and for !!external bang users"
     />
 </head>
 <body>
     <header>
         <div class="header-links">
-            <a href="/about.html" class="info-link"><i class="fas fa-info-circle"></i> About</a>
+            <a href="/" data-i18n="back_search"></a>
         </div>
     </header>
 
     <main>
-        <div class="search-container">
+        <div class="about-section">
             <h1 class="logo">Searloc</h1>
-            <form action="/" method="get" class="search-box">
-                <input type="text" name="q" placeholder="Search..." id="search-input">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
+            <section>
+                <h2 data-i18n="about"></h2>
+                <p data-i18n="about_text"></p>
+                <h3 id="legal-notice" data-i18n="legal">Mentions légales</h3>
+                <p data-i18n="legal_notice"></p>
+                <h3 data-i18n="privacy"></h3>
+                <p data-i18n="privacy_text"></p>
+            </section>
         </div>
     </main>
 

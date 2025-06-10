@@ -5,5 +5,11 @@
     "issue": "Signaler un problème",
     "legal": "Mentions légales",
     "instances_references": "Référence des instances",
-    "search_placeholder": "Recherche..."
+    "search_placeholder": "Recherche...",
+    "back_search": "Retour à la recherche",
+    "about": "À propos",
+    "about_text": "Searloc est un randomiseur local rapide pour les instances searXNG et pour les utilisateurs des !!external bang.",
+    "legal_notice": "Ce site est édité à titre personnel, sans but lucratif. Il est hébergé par IONOS, un fournisseur de services Internet allemand : IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Allemagne. Searloc n'est pas affilié à searXNG ou à IONOS.",
+    "privacy": "Politique de confidentialité",
+    "privacy_text": "Searloc ne collecte aucune donnée personnelle. Les requêtes de recherche sont traitées localement dans votre navigateur et ne sont pas envoyées à un serveur. Les instances/sites vers lesquelles vous accédez via Searloc peuvent collecter des données personnelles. Veuillez consulter leurs politiques de confidentialité respectives pour plus d'informations. Nous utiliseons du localStorage pour stocker les instances sélectionnées, les préférences de langues et mettre en cache les bangs, mais aucune donnée personnelle n'est collectée ou partagée. Notre hébergeur, IONOS, peut collecter des données d'utilisation anonymes conformément à sa politique de confidentialité (https://www.ionos.fr/terms-gtc/terms-privacy/). En utilisant Searloc, vous acceptez ces conditions."
 }

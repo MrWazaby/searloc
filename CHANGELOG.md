@@ -1,3 +1,31 @@
+## 0.2.0 (2025-06-14)
+
+### Feat
+
+- **settings**: add custom searxng instances
+- **settings**: add ttl for bangs cache
+- **settings**: allow to set instances cache
+- **settings**: add lang switch
+- **settings**: add the base setting page
+- **about**: add about page
+- **bangs**: use kagi's bangs
+- **logo**: update logo
+- **i18n**: add translation system and fr version
+
+### Fix
+
+- **settings**: fix the default cache value
+- **bangs**: fix linting error
+- **search-bar**: fix the hardcoded place holder
+- **locales**: try to fix #34
+- **build**: fix build errors
+- **coc**: fix the contact email
+- **readme**: fix some typos
+
+### Refactor
+
+- **lang**: refactor the lang files
+
 ## 0.1.1 (2025-06-02)
 
 ### Fix

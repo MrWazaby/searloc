@@ -17,8 +17,8 @@ interface SearlocSettings {
 const DEFAULT_SETTINGS: SearlocSettings = {
   customInstances: [],
   language: 'en',
-  bangRefreshHours: 24,
-  instanceRefreshHours: 168
+  bangRefreshHours: 168,
+  instanceRefreshHours: 24
 };
 
 /**

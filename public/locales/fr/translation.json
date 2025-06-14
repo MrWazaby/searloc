@@ -4,25 +4,30 @@
         "settings": "Paramètres",
         "about": "À propos"   
     },
-    "search_input": "Recherche...",
-    "footer": "Searloc - 0.1.1 — Un randomiseur local rapide pour les instances searXNG et pour les utilisateurs des !!external bang",
-    "source": "Code source",
-    "issue": "Signaler un problème",
-    "legal": "Mentions légales",
-    "instances_references": "Référence des instances",
-    "search_placeholder": "Recherche...",
-    "back_search": "Retour à la recherche",
-    "about": "À propos",
-    "about_text": "Searloc est un randomiseur local rapide pour les instances searXNG et pour les utilisateurs des !!external bang.",
-    "legal_notice": "Ce site est édité à titre personnel, sans but lucratif. Il est hébergé par IONOS, un fournisseur de services Internet allemand : IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Allemagne. Searloc n'est pas affilié à searXNG ou à IONOS.",
-    "privacy": "Politique de confidentialité",
-    "privacy_text": "Searloc ne collecte aucune donnée personnelle. Les requêtes de recherche sont traitées localement dans votre navigateur et ne sont pas envoyées à un serveur. Les instances/sites vers lesquelles vous accédez via Searloc peuvent collecter des données personnelles. Veuillez consulter leurs politiques de confidentialité respectives pour plus d'informations. Nous utiliseons du localStorage pour stocker les instances sélectionnées, les préférences et mettre en cache les bangs, mais aucune donnée personnelle n'est collectée ou partagée. Notre hébergeur, IONOS, peut collecter des données d'utilisation anonymes conformément à sa politique de confidentialité (https://www.ionos.fr/terms-gtc/terms-privacy/). En utilisant Searloc, vous acceptez ces conditions.",
-    "settings.title": "Paramètres",
-    "settings.custom_instance_label": "Instances personnalisées",
-    "settings.custom_instance_desc": "Ajoutez vos propres instances searXNG. Séparez plusieurs entrées par des virgules.",
-    "settings.language_label": "Langue",
-    "settings.bang_refresh_label": "Rafraîchir les bangs toutes les (heures)",
-    "settings.instance_refresh_label": "Rafraîchir les instances toutes les (heures)",
-    "settings.save_btn": "Enregistrer les paramètres",
-    "settings.saved_message": "Paramètres enregistrés avec succès."
+    "footer": {
+        "infos": "Searloc - 0.1.1 — Un randomiseur local rapide pour les instances searXNG et pour les utilisateurs des !!external bang",
+        "source": "Code source",
+        "issue": "Signaler un problème",
+        "legal": "Mentions légales",
+        "instances_references": "Référence des instances"
+    },
+    "about": {
+        "title": "À propos",
+        "text": "Searloc est un randomiseur local rapide pour les instances searXNG et pour les utilisateurs des !!external bang.",
+        "legal": "Mentions légales",
+        "legal_notice": "Ce site est édité à titre personnel, sans but lucratif. Il est hébergé par IONOS, un fournisseur de services Internet allemand : IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Allemagne. Searloc n'est pas affilié à searXNG ou à IONOS.",
+        "privacy": "Politique de confidentialité",
+        "privacy_text": "Searloc ne collecte aucune donnée personnelle. Les requêtes de recherche sont traitées localement dans votre navigateur et ne sont pas envoyées à un serveur. Les instances/sites vers lesquels vous accédez via Searloc peuvent collecter des données personnelles. Veuillez consulter leurs politiques de confidentialité respectives pour plus d'informations. Nous utiliseons du localStorage pour stocker les instances sélectionnées, les préférences et mettre en cache les bangs, mais aucune donnée personnelle n'est collectée ou partagée. Notre hébergeur, IONOS, peut collecter des données d'utilisation anonymes conformément à sa politique de confidentialité (https://www.ionos.fr/terms-gtc/terms-privacy/). En utilisant Searloc, vous acceptez ces conditions."
+    },
+    "settings": {
+        "title": "Paramètres",
+        "custom_instance_label": "Instances personnalisées",
+        "custom_instance_desc": "Ajoutez vos propres instances searXNG. Séparez plusieurs entrées par des virgules.",
+        "language_label": "Langue",
+        "bang_refresh_label": "Rafraîchir les bangs toutes les (heures)",
+        "instance_refresh_label": "Rafraîchir les instances toutes les (heures)",
+        "save_btn": "Enregistrer les paramètres",
+        "saved_message": "Paramètres enregistrés avec succès."
+    },
+    "search_placeholder": "Recherche..."
 }

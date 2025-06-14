@@ -1,6 +1,5 @@
 import i18next from 'i18next';
 import { translateApp } from './i18next';
-import { removeLocalStorage } from './utils';
 
 /**
  * Interface representing the application settings
@@ -19,7 +18,7 @@ const DEFAULT_SETTINGS: SearlocSettings = {
   customInstances: [],
   language: 'en',
   bangRefreshHours: 24,
-  instanceRefreshHours: 24
+  instanceRefreshHours: 168
 };
 
 /**
@@ -94,8 +93,8 @@ function applySettingsFromForm(formElement: HTMLFormElement): void {
   }
 
   // Clear localStorage if language changes to reset cache
-  removeLocalStorage('bangs_json');
-  removeLocalStorage('searxng_instances');
+  localStorage.removeItem('bangs_json');
+  localStorage.removeItem('searxng_instances');
 }
 
 /**

@@ -21,10 +21,6 @@ export function getLocalStorage(name: string): string | undefined {
   }
 }
 
-export function removeLocalStorage(name: string): void {
-  localStorage.removeItem(name);
-}
-
 export function getRandomElement(urlMap: Record<string, string>): string | undefined {
   const urls = Object.keys(urlMap);
   if (urls.length === 0) return undefined;

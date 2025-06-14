@@ -1,5 +1,6 @@
 import { fetchAndStoreSearxngInstances } from "./searxng";
-import { getRandomElement } from "./utils";
+import { getRandomElement, setLocalStorage, getLocalStorage } from "./utils";
+import { loadSettings } from "./settings";
 
 type Bang = {
   s: string;
@@ -11,7 +12,7 @@ type Bang = {
 };
 
 async function fetchBangs(): Promise<Bang[]> {
-  const bangs = localStorage.getItem("bangs_json");
+  const bangs = getLocalStorage("bangs_json");
   if (bangs) {
     try {
       return JSON.parse(bangs);
@@ -20,11 +21,12 @@ async function fetchBangs(): Promise<Bang[]> {
       localStorage.removeItem("bangs_json"); // Clear corrupted data
     }
   }
+  const settings = loadSettings();
+  const storageMaxAgeHours = settings.bangRefreshHours || 24;
   const resp = await fetch("/bangs.json");
   if (!resp.ok) return [];
   const data = await resp.json();
-  localStorage.setItem("bangs_json", JSON.stringify(data));
-  console.log("Bangs JSON fetched and stored in localStorage:", data);
+  setLocalStorage("bangs_json", JSON.stringify(data), storageMaxAgeHours * 3600);
   return data;
 }
 

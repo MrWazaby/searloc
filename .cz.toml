@@ -5,4 +5,9 @@ version_scheme = "semver"
 version_provider = "npm"
 update_changelog_on_bump = true
 major_version_zero = true
-version_files = ["package.json", "public/locales/*/translation.json"]
+version_files = [
+    "package.json",
+    "index.html",
+    "about.html",
+    "settings.html"
+]

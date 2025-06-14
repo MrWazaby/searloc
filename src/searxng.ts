@@ -52,6 +52,12 @@ async function fetchAndStoreSearxngInstances(): Promise<{}> {
     }
   });
 
+  for (const customUrl of settings.customInstances) {
+    if (customUrl && customUrl.includes("://")) {
+      urlMap[customUrl] = customUrl;
+    }
+  }
+
   setLocalStorage(STORAGE_NAME, JSON.stringify(urlMap), storageMaxAgeHours * 3600);
   return urlMap;
 }

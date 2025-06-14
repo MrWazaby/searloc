@@ -60,7 +60,8 @@ function parseCustomInstances(instancesString: string): string[] {
   return instancesString
     .split(',')
     .map(url => url.trim())
-    .filter(url => url && url.includes('://'));
+    .filter(url => url && url.includes('://'))
+    .map(url => url.endsWith('/') ? url : url + '/');
 }
 
 /**

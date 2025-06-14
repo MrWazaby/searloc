@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings — Searloc</title>
+    <link rel="icon" type="image/svg+xml" href="/search.svg" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <meta
+      name="description"
+      content="Searloc settings page: customize your search experience and local preferences"
+    />
+</head>
+<body>
+    <header>
+        <div class="header-links">
+            <a href="/" class="info-link"><i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="nav.search"></span></a>
+            <a href="/about.html" class="info-link"><i class="fas fa-info-circle"></i> <span data-i18n="nav.about"></span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="settings-container">
+            <h1 class="logo">Searloc</h1>
+            <section class="settings-section">
+                <h2 data-i18n="settings.title"></h2>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="custom-instance" data-i18n="settings.custom_instance_label"></label>
+                        <input type="textarea" id="custom-instance" name="customInstance" placeholder="https://exemple.searxng.instance/,https://exemple.searxng.instance/">
+                        <small data-i18n="settings.custom_instance_desc"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lang-select" data-i18n="settings.language_label"></label>
+                        <select id="lang-select" name="lang">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bang-refresh-select" data-i18n="settings.bang_refresh_label"></label>
+                        <input type="number" id="bang-refresh-select" name="bangRefresh" min="1" max="720" step="1" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="instamce-refresh-select" data-i18n="settings.instance_refresh_label"></label>
+                        <input type="number" id="instance-refresh-select" name="instanceRefresh" min="1" max="720" step="1" value="5">
+                    </div>
+                    <button type="submit" class="btn-save">
+                        <i class="fas fa-save"></i> <span data-i18n="settings.save_btn"></span>
+                    </button>
+                    <div id="settings-message" style="margin-top:12px;font-size:0.9em;"></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p data-i18n="footer.infos"></p>
+            <p>
+                <a href="https://codeberg.org/wazaby/searloc" target="_blank" data-i18n="footer.source"></a> | 
+                <a href="https://codeberg.org/wazaby/searloc/issues" target="_blank" data-i18n="footer.issue"></a> | 
+                <a href="/about.html#legal-notice" data-i18n="footer.legal"></a> | 
+                <a href="https://searx.space/" target="_blank" data-i18n="footer.instances_references"></a>
+            </p>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+

@@ -134,3 +134,129 @@ footer a:hover {
     transform: rotate(360deg);
   }
 }
+
+.about-section {
+    background-color: #23272f;
+    border-radius: 8px;
+    padding: 32px 24px;
+    margin: 32px auto 32px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: #4285f4;
+}
+
+.about-section h3 {
+    font-size: 1.3rem;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    color: #7fa0f7;
+}
+
+.about-section p {
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: #e0e0e0;
+}
+
+/* Responsive tweaks for about page */
+@media (max-width: 600px) {
+    .about-section {
+        padding: 18px 6vw;
+        margin-top: 18px;
+    }
+    .about-section h2 {
+        font-size: 1.3rem;
+    }
+
+}
+
+/* SETTINGS PAGE */
+.settings-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 32px;
+    background-color: #23272f;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    padding: 32px 24px 24px 24px;
+}
+
+.settings-section {
+    margin-top: 16px;
+    text-align: left;
+}
+
+.settings-section h2 {
+    color: #4285f4;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: #e0e0e0;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: #35363a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.form-group small {
+    color: #b0b0b0;
+}
+
+.btn-save {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.btn-save:hover {
+    background-color: #3367d6;
+}
+
+#settings-message {
+    color: #7fa0f7;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Responsive tweaks for settings page */
+@media (max-width: 600px) {
+    .settings-container {
+        padding: 18px 6vw 12px 6vw;
+        margin-top: 18px;
+    }
+    .settings-section h2 {
+        font-size: 1.3rem;
+    }
+}

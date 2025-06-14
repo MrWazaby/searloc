@@ -1,6 +1,6 @@
 # Searloc
 
-Welcome to Searloc, a decentralized search project focused on privacy. By redirecting your search across multiple SearxNG instances, Searloc ensures no single point of control. It operates without server-side processing, using only HTML, CSS, and JavaScript, and includes no telemetry or trackers. Bangs search are handled locally, keeping your data private. 
+Welcome to Searloc, a decentralized search project focused on privacy. By redirecting your searches across multiple SearxNG instances, Searloc ensures no single point of control. It operates without server-side processing, using only HTML, CSS, and JavaScript, and includes no telemetry or trackers. Bangs search are handled locally, keeping your data private. 
 
 ## How to use it 
 To use Searloc, simply visit https://searloc.org and enter your search query.
@@ -41,4 +41,6 @@ Searloc is lisenced under the MIT License. You can view the full license text in
 ## Acknowledgements
 - [SearxNG](https://github.com/searxng/searxng) for providing the search engine framework and the inspiration for the design.
 - [Searx.space](https://searx.space) for the instances list ans rating.
-- [Unduck](https://github.com/t3dotgg/unduck) for the base code source this project is based on.
+- [Unduck](https://github.com/t3dotgg/unduck) for the base source code this project is forked on.
+- [Logodust](https://logodust.com) for the base logo design.
+- [Kagi Bangs](https://github.com/kagisearch/bangs) for the bangs search functionality.

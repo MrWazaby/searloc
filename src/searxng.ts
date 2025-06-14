@@ -1,4 +1,5 @@
 import { getLocalStorage, setLocalStorage } from "./utils";
+import { loadSettings } from "./settings";
 
 type SearxngInstance = {
     network_type: string;
@@ -17,7 +18,8 @@ type SearxngInstance = {
 }
 
 const STORAGE_NAME = "searxng_instances";
-const STORAGE_MAX_AGE = 24 * 60 * 60; // 1 day in seconds
+const settings = loadSettings();
+const storageMaxAgeHours = settings.instanceRefreshHours || 24;
 
 async function fetchAndStoreSearxngInstances(): Promise<{}> {
   // If cookie exists, return parsed value
@@ -50,7 +52,13 @@ async function fetchAndStoreSearxngInstances(): Promise<{}> {
     }
   });
 
-  setLocalStorage(STORAGE_NAME, JSON.stringify(urlMap), STORAGE_MAX_AGE);
+  for (const customUrl of settings.customInstances) {
+    if (customUrl && customUrl.includes("://")) {
+      urlMap[customUrl] = customUrl;
+    }
+  }
+
+  setLocalStorage(STORAGE_NAME, JSON.stringify(urlMap), storageMaxAgeHours * 3600);
   return urlMap;
 }
 

@@ -1,5 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200pt" height="1200pt" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
- <rect width="1200" height="1200" fill="black"/>
- <path fill="white" d="m980.48 905.76-198.84-199.08c89.203-125.34 77.953-300.14-34.406-412.64-125.26-125.44-328.03-125.44-453.32 0-125.26 125.44-125.26 328.45 0 453.84 112.36 112.5 286.97 123.74 412.18 34.406l198.84 199.08c53.25 53.297 132.05-19.078 75.562-75.609zm-610.87-233.58c-83.391-83.531-83.391-218.86 0-302.39s218.58-83.531 302.02 0c83.391 83.531 83.391 218.86 0 302.39-83.438 83.484-218.63 83.484-302.02 0z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 141.53473 144.45023"
+   xml:space="preserve"
+   sodipodi:docname="pinsearch.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   width="141.53473"
+   height="144.45023"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs2"><linearGradient
+     id="swatch3"
+     inkscape:swatch="solid"><stop
+       style="stop-color:#000000;stop-opacity:1;"
+       offset="0"
+       id="stop3" /></linearGradient></defs><sodipodi:namedview
+   id="namedview2"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="3.7729258"
+   inkscape:cx="91.440971"
+   inkscape:cy="67.056712"
+   inkscape:window-width="1920"
+   inkscape:window-height="1080"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer0_0_FILL" />
+<g
+   id="g2"
+   transform="translate(-43.997688,-22.793983)">
+	<g
+   id="g1">
+		<g
+   id="Layer0_0_FILL">
+			<ellipse
+   style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero"
+   id="path3"
+   cx="114.76505"
+   cy="95.019096"
+   rx="70.767365"
+   ry="72.225113" /><ellipse
+   style="fill:#35363a;fill-opacity:1;fill-rule:nonzero;stroke-width:1.01858"
+   id="path4"
+   cx="118.47569"
+   cy="106.94617"
+   rx="53.804398"
+   ry="54.997105" /><path
+   d="m 132.5,110.1 c 4.7,-4.7 7,-10.3 6.9,-17 0,-6.6 -2.3,-12.2 -7,-16.9 -4.7,-4.7 -10.3,-7.1 -16.9,-7.1 v 24 l -17,-17 c -4.7,4.7 -7.1,10.3 -7.1,17 0,6.6 2.4,12.2 7.1,17 4.7,4.7 10.3,7 16.9,7 6.7,0 12.4,-2.3 17.1,-7 M 181.4,90 V 89 C 181.2,71 174.7,55.5 161.9,42.7 154.4,35.2 146,29.8 136.7,26.6 h -0.2 C 129.8,24.3 122.6,23.1 115,23.1 h -0.4 c -7.8,0 -15.2,1.2 -22.1,3.5 -0.1,0.1 -0.2,0.1 -0.4,0.2 C 82.9,30 74.6,35.3 67.2,42.7 54.4,55.5 47.9,71 47.6,89 v 1 c 0,2.7 0.2,5.3 0.5,7.9 0.2,2.2 0.6,4.5 1,6.7 1.6,7.3 5.095139,15.16019 8.2,20.4 0.6,1 2.625232,6.50579 3.325232,7.50579 10.913929,18.9014 12.717154,1.61711 24.007079,27.38357 l 0.287416,0.65596 C 120.52117,176.06546 148.25775,161.02767 156.9,147.7 l -22,-22 c -5.8,3.6 -12.4,5.5 -19.8,5.5 -10.4,0 -19.3,-3.7 -26.6,-11 -7.4,-7.4 -11,-16.3 -11.1,-26.7 0,-10.4 3.7,-19.3 11,-26.7 7.4,-7.4 16.2,-11 26.7,-11 10.4,0 19.3,3.7 26.7,11.1 7.4,7.4 11,16.2 11,26.6 0,7.1 -1.7,13.4 -5.1,19.1 l 19.4,19.4 2.7,-4.2 c 0.6,-0.9 1.3,-1.9 1.9,-2.9 4,-6.5 6.8,-13.5 8.2,-21 0.4,-1.8 0.7,-3.6 1,-5.4 0,-0.2 0,-0.4 0.1,-0.7 0.3,-2.5 0.4,-5.1 0.4,-7.8 z"
+   id="path1"
+   inkscape:highlight-color="#4285f4"
+   style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero"
+   sodipodi:nodetypes="ccscccscscscsccssccscsccccscccssccssscccccccs" />
+		</g>
+	</g>
+</g>
 </svg>

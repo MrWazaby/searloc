@@ -7,4 +7,13 @@ export default defineConfig({
       registerType: "autoUpdate",
     }),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        about: 'about.html',
+        settings: 'settings.html',
+      }
+    }
+  }
 });

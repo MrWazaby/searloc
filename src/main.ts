@@ -1,5 +1,8 @@
 import { doRedirect } from "./bang";
-import { transalteApp } from "./utils";
+import { initI18n } from "./i18next";
+import { initSettings } from "./settings";
 
-transalteApp();
 doRedirect();
+
+initI18n();
+initSettings();

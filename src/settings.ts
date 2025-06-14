@@ -1,10 +1,11 @@
 import i18next from 'i18next';
 import { translateApp } from './i18next';
+import { removeLocalStorage } from './utils';
 
 /**
  * Interface representing the application settings
  */
-export interface SearlocSettings {
+interface SearlocSettings {
   customInstances: string[];
   language: 'fr' | 'en';
   bangRefreshHours: number;
@@ -14,7 +15,7 @@ export interface SearlocSettings {
 /**
  * Default settings values
  */
-export const DEFAULT_SETTINGS: SearlocSettings = {
+const DEFAULT_SETTINGS: SearlocSettings = {
   customInstances: [],
   language: 'en',
   bangRefreshHours: 24,
@@ -44,7 +45,7 @@ export function loadSettings(): SearlocSettings {
 /**
  * Saves settings to localStorage
  */
-export function saveSettings(settings: SearlocSettings): void {
+function saveSettings(settings: SearlocSettings): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
   } catch (error) {
@@ -55,7 +56,7 @@ export function saveSettings(settings: SearlocSettings): void {
 /**
  * Parses a comma-separated string of instances into an array
  */
-export function parseCustomInstances(instancesString: string): string[] {
+function parseCustomInstances(instancesString: string): string[] {
   if (!instancesString) return [];
   return instancesString
     .split(',')
@@ -66,7 +67,7 @@ export function parseCustomInstances(instancesString: string): string[] {
 /**
  * Validates and applies the settings from the form
  */
-export function applySettingsFromForm(formElement: HTMLFormElement): SearlocSettings {
+function applySettingsFromForm(formElement: HTMLFormElement): void {
   const formData = new FormData(formElement);
   
   const customInstancesString = formData.get('customInstance') as string || '';
@@ -91,14 +92,16 @@ export function applySettingsFromForm(formElement: HTMLFormElement): SearlocSett
     i18next.changeLanguage(language);
     translateApp();
   }
-  
-  return validatedSettings;
+
+  // Clear localStorage if language changes to reset cache
+  removeLocalStorage('bangs_json');
+  removeLocalStorage('searxng_instances');
 }
 
 /**
  * Populates the settings form with current values
  */
-export function populateSettingsForm(formElement: HTMLFormElement, settings: SearlocSettings): void {
+function populateSettingsForm(formElement: HTMLFormElement, settings: SearlocSettings): void {
   const customInstanceInput = formElement.querySelector('#custom-instance') as HTMLInputElement;
   if (customInstanceInput) {
     customInstanceInput.value = settings.customInstances.join(',');
@@ -137,7 +140,7 @@ export function initSettings(): void {
   // Handle form submission
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const updatedSettings = applySettingsFromForm(form);
+    applySettingsFromForm(form);
     
     // Show success message
     const messageElement = document.getElementById('settings-message');

@@ -23,5 +23,6 @@
     "settings.language_label": "Langue",
     "settings.bang_refresh_label": "Rafraîchir les bangs toutes les (heures)",
     "settings.instance_refresh_label": "Rafraîchir les instances toutes les (heures)",
-    "settings.save_btn": "Enregistrer les paramètres"
+    "settings.save_btn": "Enregistrer les paramètres",
+    "settings.saved_message": "Paramètres enregistrés avec succès."
 }

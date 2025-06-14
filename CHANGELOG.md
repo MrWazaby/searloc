@@ -1,3 +1,9 @@
+## 0.2.1 (2025-06-14)
+
+### Fix
+
+- **cz**: fix the version increment on locales
+
 ## 0.2.0 (2025-06-14)
 
 ### Feat

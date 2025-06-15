@@ -1,4 +1,4 @@
-{   
+{
     "nav": {
         "search": "Search",
         "settings": "Settings",
@@ -29,5 +29,5 @@
         "save_btn": "Save settings",
         "saved_message": "Settings saved successfully."
     },
-    "search_placeholder": "Search..."
+    "search_placeholder": "Search…"
 }

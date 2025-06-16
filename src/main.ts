@@ -1,8 +1,13 @@
 import { doRedirect } from "./bang";
 import { initI18n } from "./i18next";
 import { initSettings } from "./settings";
+import { Autocomplete } from './autocomplete';
 
-doRedirect();
+document.addEventListener('DOMContentLoaded', () => {
+    doRedirect();
 
-initI18n();
-initSettings();
+    initI18n();
+    initSettings();
+
+    new Autocomplete('search-input', 'autocomplete-container');
+});

@@ -260,3 +260,46 @@ footer a:hover {
         font-size: 1.3rem;
     }
 }
+
+/* Autocomplete styles */
+.autocomplete-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.active {
+    background-color: #f5f5f5;
+}
+
+.autocomplete-item .bang-url {
+    color: #777;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+.search-input-container {
+    position: relative;
+    flex: 1;
+}

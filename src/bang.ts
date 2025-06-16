@@ -11,7 +11,7 @@ type Bang = {
   sc?: string;
 };
 
-async function fetchBangs(): Promise<Bang[]> {
+export async function fetchBangs(): Promise<Bang[]> {
   const bangs = getLocalStorage("bangs_json");
   if (bangs) {
     try {

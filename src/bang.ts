@@ -2,7 +2,7 @@ import { fetchAndStoreSearxngInstances } from "./searxng";
 import { getRandomElement, setLocalStorage, getLocalStorage } from "./utils";
 import { loadSettings } from "./settings";
 
-type Bang = {
+export type Bang = {
   s: string;
   d: string;
   t: string;

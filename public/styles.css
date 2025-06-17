@@ -265,18 +265,19 @@ footer a:hover {
 .autocomplete-container {
     display: none;
     position: absolute;
+    text-align: left;
     top: 100%;
     left: 0;
     right: 0;
     max-height: 200px;
     overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #222;
+    border: 1px solid #444;
     border-top: none;
     border-radius: 0 0 4px 4px;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #eee;
 }
 
 .autocomplete-item {
@@ -290,11 +291,11 @@ footer a:hover {
 
 .autocomplete-item:hover,
 .autocomplete-item.active {
-    background-color: #f5f5f5;
+    background-color: #333;
 }
 
 .autocomplete-item .bang-url {
-    color: #777;
+    color: #aaa;
     font-size: 0.8em;
     margin-left: 8px;
 }

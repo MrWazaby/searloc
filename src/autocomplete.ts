@@ -1,9 +1,9 @@
-import { fetchBangs } from './bang';
+import { Bang, fetchBangs } from './bang';
 
 export class Autocomplete {
     private input: HTMLInputElement;
     private container: HTMLDivElement;
-    private bangs: Record<string, string> = {};
+    private bangs: Bang[] = [];
     private bangKeys: string[] = [];
 
     constructor(inputId: string, containerId: string) {
@@ -78,9 +78,16 @@ export class Autocomplete {
             if (lastPart !== '') {
                 const suggestions = this.bangKeys
                     .filter(bang => bang.toLowerCase().startsWith(lastPart))
+                    .sort((a, b) => {
+                        // First prioritize exact matches
+                        if (a.toLowerCase() === lastPart) return -1;
+                        if (b.toLowerCase() === lastPart) return 1;
+                        // Then prioritize by length (shorter first)
+                        return a.length - b.length;
+                    })
                     .slice(0, 5);  // Limit to 5 suggestions
                 
-                this.showSuggestions(suggestions, query, lastPart);
+                this.showSuggestions(suggestions, lastPart);
                 return;
             }
         }
@@ -88,7 +95,7 @@ export class Autocomplete {
         this.hideSuggestions();
     }
 
-    private showSuggestions(suggestions: string[], query: string, lastPart: string): void {
+    private showSuggestions(suggestions: string[], lastPart: string): void {
         // Clear previous suggestions
         this.container.innerHTML = '';
         
@@ -107,7 +114,7 @@ export class Autocomplete {
             const highlightedBang = `<strong>${bang.substring(0, lastPart.length)}</strong>${bang.substring(lastPart.length)}`;
             
             // Show the URL the bang points to
-            const bangObj = this.bangs.find(b => b.t === bang);
+            const bangObj = this.bangs.find(b => b.t === bang) || { t: bang, s: '' };
             item.innerHTML = `!!${highlightedBang} <span class="bang-url">${bangObj.s}</span>`;
             
             // Handle click on suggestion

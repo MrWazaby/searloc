@@ -185,6 +185,7 @@ footer a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.09);
     padding: 32px 24px 24px 24px;
+    align-items: left;
 }
 
 .settings-section {
@@ -221,7 +222,15 @@ footer a:hover {
 }
 
 .form-group input[type="checkbox"] {
+    width: 10%;
     margin-right: 8px;
+}
+
+.checkbox-group {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em
 }
 
 .form-group small {

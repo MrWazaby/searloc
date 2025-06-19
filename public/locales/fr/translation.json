@@ -27,7 +27,8 @@
         "bang_refresh_label": "Rafraîchir les bangs toutes les (heures)",
         "instance_refresh_label": "Rafraîchir les instances toutes les (heures)",
         "save_btn": "Enregistrer les paramètres",
-        "saved_message": "Paramètres enregistrés avec succès."
+        "saved_message": "Paramètres enregistrés avec succès.",
+        "retry_search_label": "Réessayer la recherche après une erreur (!! bang)"
     },
     "search_placeholder": "Recherche..."
 }

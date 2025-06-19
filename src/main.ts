@@ -9,5 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initI18n();
     initSettings();
 
-    new Autocomplete('search-input', 'autocomplete-container');
+    if (document.getElementById('search-input')) {
+        new Autocomplete('search-input', 'autocomplete-container');
+    }
 });

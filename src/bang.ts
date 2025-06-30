@@ -38,7 +38,7 @@ async function getDefaultSearch() : Promise<{ d: string; u: string } | undefined
   }
   return {
     d: instance.replace(/^https?:\/\//, "").replace(/\/$/, ""),
-    u: instance + "search?q={{{s}}}",
+    u: instance + "?q={{{s}}}",
   }
 }
 
@@ -87,6 +87,6 @@ async function getBangredirectUrl() {
 export async function doRedirect() {
   const searchUrl = await getBangredirectUrl();
   if (!searchUrl) return;
-  window.location.replace(searchUrl);
+  window.open(searchUrl, '_self', 'noreferrer');
 }
 

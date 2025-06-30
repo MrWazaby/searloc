@@ -1,3 +1,9 @@
+## 0.2.3 (2025-06-30)
+
+### Fix
+
+- **searxng**: fix the refferer to avoid some redirections
+
 ## 0.2.2 (2025-06-14)
 
 ### Fix

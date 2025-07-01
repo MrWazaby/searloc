@@ -38,7 +38,7 @@ async function getDefaultSearch() : Promise<{ d: string; u: string } | undefined
   }
   return {
     d: instance.replace(/^https?:\/\//, "").replace(/\/$/, ""),
-    u: instance + "?q={{{s}}}",
+    u: instance + "search?q={{{s}}}",
   }
 }
 

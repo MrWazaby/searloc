@@ -1,3 +1,9 @@
+## 0.2.4 (2025-07-01)
+
+### Fix
+
+- **searxng**: try to bypass some instances redirections
+
 ## 0.2.3 (2025-06-30)
 
 ### Fix

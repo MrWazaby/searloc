@@ -27,7 +27,56 @@
         "bang_refresh_label": "Rafraîchir les bangs toutes les (heures)",
         "instance_refresh_label": "Rafraîchir les instances toutes les (heures)",
         "save_btn": "Enregistrer les paramètres",
-        "saved_message": "Paramètres enregistrés avec succès."
+        "saved_message": "Paramètres enregistrés avec succès.",
+        "add_search_engine": "Ajouter comme moteur de recherche"
     },
-    "search_placeholder": "Recherche..."
+    "search_placeholder": "Recherche...",
+    "search_engine_guide": {
+        "title": "Comment ajouter Searloc comme moteur de recherche dans",
+        "close": "Fermer",
+        "browser_names": {
+            "chrome": "Chrome",
+            "firefox": "Firefox",
+            "safari": "Safari",
+            "edge": "Edge",
+            "opera": "Opera",
+            "unknown": "votre navigateur"
+        },
+        "chrome": {
+            "step1": "Ouvrez Chrome et allez dans les Paramètres (⋮ > Paramètres)",
+            "step2": "Cliquez sur 'Moteur de recherche' dans la barre latérale gauche",
+            "step3": "Cliquez sur 'Gérer les moteurs de recherche et la recherche de site'",
+            "step4": "Cliquez sur 'Ajouter' à côté de 'Recherche de site'",
+            "step5": "Entrez 'Searloc' comme nom, 'searloc' comme raccourci, et cette URL comme URL de recherche : {{baseUrl}}/?q=%s"
+        },
+        "firefox": {
+            "step1": "Visitez cette page dans Firefox",
+            "step2": "Faites un clic droit sur la barre d'adresse",
+            "step3": "Sélectionnez 'Ajouter un mot-clé pour cette recherche'",
+            "step4": "Entrez 'searloc' comme mot-clé et 'Searloc' comme nom"
+        },
+        "safari": {
+            "step1": "Safari ne prend pas en charge l'ajout de moteurs de recherche personnalisés directement",
+            "step2": "Vous pouvez mettre cette page en signet pour un accès rapide",
+            "step3": "Ou utiliser le raccourci de la barre d'adresse en tapant l'URL",
+            "step4": "Considérez utiliser Chrome ou Firefox pour une meilleure intégration des moteurs de recherche"
+        },
+        "edge": {
+            "step1": "Ouvrez Edge et allez dans les Paramètres (⋯ > Paramètres)",
+            "step2": "Cliquez sur 'Confidentialité, recherche et services'",
+            "step3": "Faites défiler vers le bas jusqu'à la section 'Services' et cliquez sur 'Barre d'adresse et recherche'",
+            "step4": "Cliquez sur 'Gérer les moteurs de recherche'",
+            "step5": "Cliquez sur 'Ajouter' et entrez 'Searloc' comme nom et cette URL : {{baseUrl}}/?q=%s"
+        },
+        "opera": {
+            "step1": "Ouvrez Opera et allez dans les Paramètres (⋯ > Paramètres)",
+            "step2": "Cliquez sur 'Moteur de recherche' dans la barre latérale gauche",
+            "step3": "Cliquez sur 'Gérer les moteurs de recherche'",
+            "step4": "Cliquez sur 'Ajouter' et entrez 'Searloc' comme nom, 'searloc' comme mot-clé, et cette URL : {{baseUrl}}/?q=%s"
+        },
+        "unknown": {
+            "step1": "Vérifiez les paramètres de votre navigateur pour la gestion des moteurs de recherche",
+            "step2": "Ajoutez cette URL comme moteur de recherche : {{baseUrl}}/?q=%s"
+        }
+    }
 }

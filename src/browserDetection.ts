@@ -53,6 +53,8 @@ export function getBrowserGuide(browser: Browser): BrowserGuide {
         i18next.t('search_engine_guide.chrome.step3'),
         i18next.t('search_engine_guide.chrome.step4'),
         i18next.t('search_engine_guide.chrome.step5', { baseUrl }),
+        i18next.t('search_engine_guide.chrome.step6'),
+        i18next.t('search_engine_guide.chrome.step7'),
       ]
     },
     [Browser.Firefox]: {
@@ -62,6 +64,9 @@ export function getBrowserGuide(browser: Browser): BrowserGuide {
         i18next.t('search_engine_guide.firefox.step2'),
         i18next.t('search_engine_guide.firefox.step3'),
         i18next.t('search_engine_guide.firefox.step4'),
+        i18next.t('search_engine_guide.firefox.step5'),
+        i18next.t('search_engine_guide.firefox.step6'),
+        i18next.t('search_engine_guide.firefox.step7'),
       ]
     },
     [Browser.Safari]: {
@@ -71,6 +76,7 @@ export function getBrowserGuide(browser: Browser): BrowserGuide {
         i18next.t('search_engine_guide.safari.step2'),
         i18next.t('search_engine_guide.safari.step3'),
         i18next.t('search_engine_guide.safari.step4'),
+        i18next.t('search_engine_guide.safari.step5'),
       ]
     },
     [Browser.Edge]: {
@@ -81,6 +87,8 @@ export function getBrowserGuide(browser: Browser): BrowserGuide {
         i18next.t('search_engine_guide.edge.step3'),
         i18next.t('search_engine_guide.edge.step4'),
         i18next.t('search_engine_guide.edge.step5', { baseUrl }),
+        i18next.t('search_engine_guide.edge.step6'),
+        i18next.t('search_engine_guide.edge.step7'),
       ]
     },
     [Browser.Opera]: {
@@ -90,6 +98,8 @@ export function getBrowserGuide(browser: Browser): BrowserGuide {
         i18next.t('search_engine_guide.opera.step2'),
         i18next.t('search_engine_guide.opera.step3'),
         i18next.t('search_engine_guide.opera.step4', { baseUrl }),
+        i18next.t('search_engine_guide.opera.step5'),
+        i18next.t('search_engine_guide.opera.step6'),
       ]
     },
     [Browser.Unknown]: {

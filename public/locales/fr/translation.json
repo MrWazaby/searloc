@@ -47,32 +47,42 @@
             "step2": "Cliquez sur 'Moteur de recherche' dans la barre latérale gauche",
             "step3": "Cliquez sur 'Gérer les moteurs de recherche et la recherche de site'",
             "step4": "Cliquez sur 'Ajouter' à côté de 'Recherche de site'",
-            "step5": "Entrez 'Searloc' comme nom, 'searloc' comme raccourci, et cette URL comme URL de recherche : {{baseUrl}}/?q=%s"
+            "step5": "Entrez 'Searloc' comme nom, 'searloc' comme raccourci, et cette URL comme URL de recherche : {{baseUrl}}/?q=%s",
+            "step6": "Cliquez sur 'Ajouter' pour enregistrer le moteur de recherche",
+            "step7": "Cliquez sur les trois points à côté de 'Searloc' et sélectionnez 'Définir par défaut' pour en faire votre moteur de recherche par défaut"
         },
         "firefox": {
             "step1": "Visitez cette page dans Firefox",
             "step2": "Faites un clic droit sur la barre d'adresse",
             "step3": "Sélectionnez 'Ajouter un mot-clé pour cette recherche'",
-            "step4": "Entrez 'searloc' comme mot-clé et 'Searloc' comme nom"
+            "step4": "Entrez 'searloc' comme mot-clé et 'Searloc' comme nom",
+            "step5": "Allez dans les Paramètres Firefox (☰ > Paramètres)",
+            "step6": "Cliquez sur 'Recherche' dans la barre latérale gauche",
+            "step7": "Dans le menu déroulant 'Moteur de recherche par défaut', vous pouvez utiliser la barre d'adresse avec votre mot-clé 'searloc' pour des recherches rapides"
         },
         "safari": {
             "step1": "Safari ne prend pas en charge l'ajout de moteurs de recherche personnalisés directement",
             "step2": "Vous pouvez mettre cette page en signet pour un accès rapide",
             "step3": "Ou utiliser le raccourci de la barre d'adresse en tapant l'URL",
-            "step4": "Considérez utiliser Chrome ou Firefox pour une meilleure intégration des moteurs de recherche"
+            "step4": "Considérez utiliser Chrome ou Firefox pour une meilleure intégration des moteurs de recherche",
+            "step5": "Alternativement, vous pouvez changer votre recherche par défaut dans Préférences Safari > Recherche, mais seules les options intégrées sont disponibles"
         },
         "edge": {
             "step1": "Ouvrez Edge et allez dans les Paramètres (⋯ > Paramètres)",
             "step2": "Cliquez sur 'Confidentialité, recherche et services'",
             "step3": "Faites défiler vers le bas jusqu'à la section 'Services' et cliquez sur 'Barre d'adresse et recherche'",
             "step4": "Cliquez sur 'Gérer les moteurs de recherche'",
-            "step5": "Cliquez sur 'Ajouter' et entrez 'Searloc' comme nom et cette URL : {{baseUrl}}/?q=%s"
+            "step5": "Cliquez sur 'Ajouter' et entrez 'Searloc' comme nom et cette URL : {{baseUrl}}/?q=%s",
+            "step6": "Cliquez sur 'Ajouter' pour enregistrer le moteur de recherche",
+            "step7": "Cliquez sur les trois points à côté de 'Searloc' et sélectionnez 'Définir par défaut' pour en faire votre moteur de recherche par défaut"
         },
         "opera": {
             "step1": "Ouvrez Opera et allez dans les Paramètres (⋯ > Paramètres)",
             "step2": "Cliquez sur 'Moteur de recherche' dans la barre latérale gauche",
             "step3": "Cliquez sur 'Gérer les moteurs de recherche'",
-            "step4": "Cliquez sur 'Ajouter' et entrez 'Searloc' comme nom, 'searloc' comme mot-clé, et cette URL : {{baseUrl}}/?q=%s"
+            "step4": "Cliquez sur 'Ajouter' et entrez 'Searloc' comme nom, 'searloc' comme mot-clé, et cette URL : {{baseUrl}}/?q=%s",
+            "step5": "Cliquez sur 'Ajouter' pour enregistrer le moteur de recherche",
+            "step6": "Dans le menu déroulant 'Moteur de recherche par défaut' en haut, sélectionnez 'Searloc' pour en faire votre moteur par défaut"
         },
         "unknown": {
             "step1": "Vérifiez les paramètres de votre navigateur pour la gestion des moteurs de recherche",

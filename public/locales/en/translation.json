@@ -47,32 +47,42 @@
             "step2": "Click on 'Search engine' in the left sidebar",
             "step3": "Click on 'Manage search engines and site search'",
             "step4": "Click 'Add' next to 'Site search'",
-            "step5": "Enter 'Searloc' as name, 'searloc' as shortcut, and this URL as search URL: {{baseUrl}}/?q=%s"
+            "step5": "Enter 'Searloc' as name, 'searloc' as shortcut, and this URL as search URL: {{baseUrl}}/?q=%s",
+            "step6": "Click 'Add' to save the search engine",
+            "step7": "Click the three dots next to 'Searloc' and select 'Make default' to set it as your default search engine"
         },
         "firefox": {
             "step1": "Visit this page in Firefox",
             "step2": "Right-click on the address bar",
             "step3": "Select 'Add a Keyword for this Search'",
-            "step4": "Enter 'searloc' as keyword and 'Searloc' as name"
+            "step4": "Enter 'searloc' as keyword and 'Searloc' as name",
+            "step5": "Go to Firefox Settings (☰ > Settings)",
+            "step6": "Click on 'Search' in the left sidebar",
+            "step7": "In the 'Default Search Engine' dropdown, you can use the address bar with your 'searloc' keyword for quick searches"
         },
         "safari": {
             "step1": "Safari doesn't support adding custom search engines directly",
             "step2": "You can bookmark this page for quick access",
             "step3": "Or use the address bar shortcut by typing the URL",
-            "step4": "Consider using Chrome or Firefox for better search engine integration"
+            "step4": "Consider using Chrome or Firefox for better search engine integration",
+            "step5": "Alternatively, you can change your default search in Safari Preferences > Search, but only built-in options are available"
         },
         "edge": {
             "step1": "Open Edge and go to Settings (⋯ > Settings)",
             "step2": "Click on 'Privacy, search, and services'",
             "step3": "Scroll down to 'Services' section and click 'Address bar and search'",
             "step4": "Click 'Manage search engines'",
-            "step5": "Click 'Add' and enter 'Searloc' as name and this URL: {{baseUrl}}/?q=%s"
+            "step5": "Click 'Add' and enter 'Searloc' as name and this URL: {{baseUrl}}/?q=%s",
+            "step6": "Click 'Add' to save the search engine",
+            "step7": "Click the three dots next to 'Searloc' and select 'Make default' to set it as your default search engine"
         },
         "opera": {
             "step1": "Open Opera and go to Settings (⋯ > Settings)",
             "step2": "Click on 'Search engine' in the left sidebar",
             "step3": "Click 'Manage search engines'",
-            "step4": "Click 'Add' and enter 'Searloc' as name, 'searloc' as keyword, and this URL: {{baseUrl}}/?q=%s"
+            "step4": "Click 'Add' and enter 'Searloc' as name, 'searloc' as keyword, and this URL: {{baseUrl}}/?q=%s",
+            "step5": "Click 'Add' to save the search engine",
+            "step6": "In the 'Default search engine' dropdown at the top, select 'Searloc' to make it your default"
         },
         "unknown": {
             "step1": "Check your browser's settings for search engine management",

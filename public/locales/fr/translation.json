@@ -58,7 +58,7 @@
             "step4": "Entrez 'searloc' comme mot-clé et 'Searloc' comme nom",
             "step5": "Allez dans les Paramètres Firefox (☰ > Paramètres)",
             "step6": "Cliquez sur 'Recherche' dans la barre latérale gauche",
-            "step7": "Dans le menu déroulant 'Moteur de recherche par défaut', vous pouvez utiliser la barre d'adresse avec votre mot-clé 'searloc' pour des recherches rapides"
+            "step7": "Dans le menu déroulant 'Moteur de recherche par défaut', cochez searloc."
         },
         "safari": {
             "step1": "Safari ne prend pas en charge l'ajout de moteurs de recherche personnalisés directement",

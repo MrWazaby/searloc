@@ -58,7 +58,7 @@
             "step4": "Enter 'searloc' as keyword and 'Searloc' as name",
             "step5": "Go to Firefox Settings (☰ > Settings)",
             "step6": "Click on 'Search' in the left sidebar",
-            "step7": "In the 'Default Search Engine' dropdown, you can use the address bar with your 'searloc' keyword for quick searches"
+            "step7": "In the 'Default Search Engine' dropdown, choose searloc"
         },
         "safari": {
             "step1": "Safari doesn't support adding custom search engines directly",

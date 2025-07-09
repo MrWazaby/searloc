@@ -1,1 +1,7 @@
-{}
+{
+    "nav": {
+        "search": "Zoeken",
+        "settings": "Instellingen",
+        "about": "Over"
+    }
+}

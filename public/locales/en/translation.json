@@ -28,7 +28,8 @@
         "instance_refresh_label": "Refresh instances every (hours)",
         "save_btn": "Save settings",
         "saved_message": "Settings saved successfully.",
-        "add_search_engine": "Add as search engine"
+        "add_search_engine": "Add as search engine",
+        "retry_search_label": "Retry search after an error (!! bang)"
     },
     "search_placeholder": "Search...",
     "search_engine_guide": {

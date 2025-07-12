@@ -179,7 +179,7 @@ footer a:hover {
 .settings-container {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 32px auto;
     margin-top: 32px;
     background-color: #23272f;
     border-radius: 8px;
@@ -436,6 +436,7 @@ footer a:hover {
         height: 18px;
         font-size: 0.7rem;
     }
+}
 
 /* Autocomplete styles */
 .autocomplete-container {

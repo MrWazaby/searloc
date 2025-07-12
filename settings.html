@@ -60,9 +60,27 @@
                     </button>
                     <div id="settings-message" style="margin-top:12px;font-size:0.9em;"></div>
                 </form>
+                <div class="search-engine-section">
+                    <a href="#" id="open-search-engine-guide" class="search-engine-link">
+                        <i class="fas fa-plus"></i> <span data-i18n="settings.add_search_engine"></span>
+                    </a>
+                </div>
             </section>
         </div>
     </main>
+
+    <!-- Search Engine Guide Modal -->
+    <div id="search-engine-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-i18n="search_engine_guide.title"></h2>
+                <span class="modal-close" id="close-search-engine-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="search-engine-modal-content">
+                <!-- Browser-specific guide content will be inserted here -->
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">

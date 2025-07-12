@@ -185,6 +185,7 @@ footer a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.09);
     padding: 32px 24px 24px 24px;
+    align-items: left;
 }
 
 .settings-section {
@@ -221,7 +222,15 @@ footer a:hover {
 }
 
 .form-group input[type="checkbox"] {
+    width: 10%;
     margin-right: 8px;
+}
+
+.checkbox-group {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em
 }
 
 .form-group small {
@@ -427,4 +436,47 @@ footer a:hover {
         height: 18px;
         font-size: 0.7rem;
     }
+
+/* Autocomplete styles */
+.autocomplete-container {
+    display: none;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #222;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #eee;
+}
+
+.autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.active {
+    background-color: #333;
+}
+
+.autocomplete-item .bang-url {
+    color: #aaa;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+.search-input-container {
+    position: relative;
+    flex: 1;
 }

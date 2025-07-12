@@ -7,6 +7,7 @@ import { translateApp } from './i18next';
 interface SearlocSettings {
   customInstances: string[];
   language: 'fr' | 'en';
+  retrySearch: boolean;
   bangRefreshHours: number;
   instanceRefreshHours: number;
 }
@@ -17,6 +18,7 @@ interface SearlocSettings {
 const DEFAULT_SETTINGS: SearlocSettings = {
   customInstances: [],
   language: 'en',
+  retrySearch: false,
   bangRefreshHours: 168,
   instanceRefreshHours: 24
 };
@@ -74,6 +76,7 @@ function applySettingsFromForm(formElement: HTMLFormElement): void {
   const customInstances = parseCustomInstances(customInstancesString);
   
   const language = (formData.get('lang') as 'fr' | 'en') || DEFAULT_SETTINGS.language;
+  const retrySearch = formData.get('retrySearch') === 'on';
   const bangRefreshHours = parseInt(formData.get('bangRefresh') as string) || DEFAULT_SETTINGS.bangRefreshHours;
   const instanceRefreshHours = parseInt(formData.get('instanceRefresh') as string) || DEFAULT_SETTINGS.instanceRefreshHours;
   
@@ -81,6 +84,7 @@ function applySettingsFromForm(formElement: HTMLFormElement): void {
   const validatedSettings: SearlocSettings = {
     customInstances,
     language,
+    retrySearch,
     bangRefreshHours: Math.min(Math.max(bangRefreshHours, 1), 720),
     instanceRefreshHours: Math.min(Math.max(instanceRefreshHours, 1), 720)
   };
@@ -110,6 +114,11 @@ function populateSettingsForm(formElement: HTMLFormElement, settings: SearlocSet
   const langSelect = formElement.querySelector('#lang-select') as HTMLSelectElement;
   if (langSelect) {
     langSelect.value = settings.language;
+  }
+
+  const retrySearchInput = formElement.querySelector('#retry-search-checkbox') as HTMLInputElement;
+  if (retrySearchInput) {
+    retrySearchInput.checked = settings.retrySearch;
   }
   
   const bangRefreshInput = formElement.querySelector('#bang-refresh-select') as HTMLInputElement;

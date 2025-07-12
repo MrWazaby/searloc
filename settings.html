@@ -27,25 +27,34 @@
                 <h2 data-i18n="settings.title"></h2>
                 <form id="settings-form">
                     <div class="form-group">
-                        <label for="custom-instance" data-i18n="settings.custom_instance_label"></label>
-                        <input type="textarea" id="custom-instance" name="customInstance" placeholder="https://exemple.searxng.instance/,https://exemple.searxng.instance/">
-                        <small data-i18n="settings.custom_instance_desc"></small>
-                    </div>
-                    <div class="form-group">
                         <label for="lang-select" data-i18n="settings.language_label"></label>
                         <select id="lang-select" name="lang">
                             <option value="fr">Français</option>
                             <option value="en">English</option>
                         </select>
                     </div>
+
+                    <div class="form-group">
+                        <label for="custom-instance" data-i18n="settings.custom_instance_label"></label>
+                        <input type="textarea" id="custom-instance" name="customInstance" placeholder="https://exemple.searxng.instance/,https://exemple.searxng.instance/">
+                        <small data-i18n="settings.custom_instance_desc"></small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label for="retry-search-checkbox" data-i18n="settings.retry_search_label"></label>
+                        <input type="checkbox" id="retry-search-checkbox" name="retrySearch">
+                    </div>
+
                     <div class="form-group">
                         <label for="bang-refresh-select" data-i18n="settings.bang_refresh_label"></label>
                         <input type="number" id="bang-refresh-select" name="bangRefresh" min="1" max="720" step="1" value="5">
                     </div>
+                    
                     <div class="form-group">
                         <label for="instamce-refresh-select" data-i18n="settings.instance_refresh_label"></label>
                         <input type="number" id="instance-refresh-select" name="instanceRefresh" min="1" max="720" step="1" value="5">
                     </div>
+                    
                     <button type="submit" class="btn-save">
                         <i class="fas fa-save"></i> <span data-i18n="settings.save_btn"></span>
                     </button>

@@ -25,8 +25,9 @@
         <div class="search-container">
             <h1 class="logo">Searloc</h1>
             <form action="/" method="get" class="search-box">
-                <input type="text" name="q" placeholder="Search..." id="search-input">
+                <input type="text" name="q" placeholder="Search..." id="search-input" autocomplete="off">
                 <button type="submit"><i class="fas fa-search"></i></button>
+                <div id="autocomplete-container" class="autocomplete-container"></div>
             </form>
         </div>
     </main>

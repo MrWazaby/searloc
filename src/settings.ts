@@ -7,6 +7,7 @@ import { translateApp } from './i18next';
 interface SearlocSettings {
   customInstances: string[];
   language: 'fr' | 'en';
+  theme: 'auto' | 'dark' | 'light';
   retrySearch: boolean;
   bangRefreshHours: number;
   instanceRefreshHours: number;
@@ -18,6 +19,7 @@ interface SearlocSettings {
 const DEFAULT_SETTINGS: SearlocSettings = {
   customInstances: [],
   language: 'en',
+  theme: 'auto',
   retrySearch: false,
   bangRefreshHours: 168,
   instanceRefreshHours: 24
@@ -76,6 +78,7 @@ function applySettingsFromForm(formElement: HTMLFormElement): void {
   const customInstances = parseCustomInstances(customInstancesString);
   
   const language = (formData.get('lang') as 'fr' | 'en') || DEFAULT_SETTINGS.language;
+  const theme = (formData.get('theme') as 'auto' | 'dark' | 'light') || DEFAULT_SETTINGS.theme;
   const retrySearch = formData.get('retrySearch') === 'on';
   const bangRefreshHours = parseInt(formData.get('bangRefresh') as string) || DEFAULT_SETTINGS.bangRefreshHours;
   const instanceRefreshHours = parseInt(formData.get('instanceRefresh') as string) || DEFAULT_SETTINGS.instanceRefreshHours;
@@ -84,6 +87,7 @@ function applySettingsFromForm(formElement: HTMLFormElement): void {
   const validatedSettings: SearlocSettings = {
     customInstances,
     language,
+    theme,
     retrySearch,
     bangRefreshHours: Math.min(Math.max(bangRefreshHours, 1), 720),
     instanceRefreshHours: Math.min(Math.max(instanceRefreshHours, 1), 720)
@@ -96,6 +100,9 @@ function applySettingsFromForm(formElement: HTMLFormElement): void {
     i18next.changeLanguage(language);
     translateApp();
   }
+
+  // Update theme if it changed
+  applyTheme(theme);
 
   // Clear localStorage if language changes to reset cache
   localStorage.removeItem('bangs_json');
@@ -116,6 +123,11 @@ function populateSettingsForm(formElement: HTMLFormElement, settings: SearlocSet
     langSelect.value = settings.language;
   }
 
+  const themeSelect = formElement.querySelector('#theme-select') as HTMLSelectElement;
+  if (themeSelect) {
+    themeSelect.value = settings.theme;
+  }
+
   const retrySearchInput = formElement.querySelector('#retry-search-checkbox') as HTMLInputElement;
   if (retrySearchInput) {
     retrySearchInput.checked = settings.retrySearch;
@@ -130,6 +142,21 @@ function populateSettingsForm(formElement: HTMLFormElement, settings: SearlocSet
   if (instanceRefreshInput) {
     instanceRefreshInput.value = settings.instanceRefreshHours.toString();
   }
+}
+
+/**
+ * Applies the specified theme to the document
+ */
+export function applyTheme(theme: 'auto' | 'dark' | 'light'): void {
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+/**
+ * Initializes the theme based on saved settings
+ */
+export function initTheme(): void {
+  const settings = loadSettings();
+  applyTheme(settings.theme);
 }
 
 /**

@@ -1,6 +1,6 @@
 import { doRedirect } from "./bang";
 import { initI18n } from "./i18next";
-import { initSettings } from "./settings";
+import { initSettings, initTheme } from "./settings";
 import { initSearchEngineModal } from "./browserDetection";
 import { Autocomplete } from './autocomplete';
 
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     doRedirect();
 
     initI18n();
+    initTheme();
     initSettings();
     initSearchEngineModal();
 

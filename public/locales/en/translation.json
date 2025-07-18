@@ -29,7 +29,7 @@
         "save_btn": "Save settings",
         "saved_message": "Settings saved successfully.",
         "add_search_engine": "Add as search engine",
-        "retry_search_label": "Retry search after an error (!! bang)"
+        "retry_search_label": "Retry/add elements to search (!! bang)"
     },
     "search_placeholder": "Search...",
     "search_engine_guide": {

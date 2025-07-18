@@ -71,8 +71,9 @@ async function getBangredirectUrl() {
 
   // Save the last search query to localStorage
   if (SETTINGS.retrySearch) {
-    if (query.match(/!!/i)) {
-      cleanQuery = getLocalStorage("last_search") || cleanQuery;
+    const addQuery = query.match(/^!!(?!\w)\s*(.*)$/i)
+    if (addQuery) {
+      cleanQuery = (getLocalStorage("last_search") || cleanQuery) + (addQuery[1] ? " " + addQuery[1]: "");
     } else {
       setLocalStorage("last_search", cleanQuery, 60 * 15);
     }

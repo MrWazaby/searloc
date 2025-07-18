@@ -29,7 +29,7 @@
         "save_btn": "Enregistrer les paramètres",
         "saved_message": "Paramètres enregistrés avec succès.",
         "add_search_engine": "Ajouter comme moteur de recherche",
-        "retry_search_label": "Réessayer la recherche après une erreur (!! bang)"
+        "retry_search_label": "Réessayer/compléter la recherche sur une autre instance (!! bang)"
     },
     "search_placeholder": "Recherche...",
     "search_engine_guide": {

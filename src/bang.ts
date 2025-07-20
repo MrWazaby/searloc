@@ -1,4 +1,4 @@
-import { fetchAndStoreSearxngInstances } from "./searxng";
+import { fetchAndStoreSearxngInstances, hashPreferences } from "./searxng";
 import { getRandomElement, setLocalStorage, getLocalStorage } from "./utils";
 import { loadSettings } from "./settings";
 
@@ -39,7 +39,7 @@ async function getDefaultSearch() : Promise<{ d: string; u: string } | undefined
   }
   return {
     d: instance.replace(/^https?:\/\//, "").replace(/\/$/, ""),
-    u: instance + "search?q={{{s}}}",
+    u: instance + "search?preferences=" + hashPreferences(SETTINGS.language, SETTINGS.theme) + "&q={{{s}}}",
   }
 }
 
@@ -71,9 +71,8 @@ async function getBangredirectUrl() {
 
   // Save the last search query to localStorage
   if (SETTINGS.retrySearch) {
-    const addQuery = query.match(/^!!(?!\w)\s*(.*)$/i)
-    if (addQuery) {
-      cleanQuery = (getLocalStorage("last_search") || cleanQuery) + (addQuery[1] ? " " + addQuery[1]: "");
+    if (query.match(/!!/i)) {
+      cleanQuery = getLocalStorage("last_search") || cleanQuery;
     } else {
       setLocalStorage("last_search", cleanQuery, 60 * 15);
     }

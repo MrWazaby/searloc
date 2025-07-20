@@ -23,6 +23,9 @@ You can also set Searloc as your default search engine in your browser. Here are
 ### Firefox
 [Check the knowledge base](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
 
+## Documentation
+For more information on how to use Searloc, check out the [documentation](https://codeberg.org/wazaby/searloc/wiki).
+
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for information on how to contribute to Searloc.
 

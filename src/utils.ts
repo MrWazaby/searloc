@@ -1,5 +1,3 @@
-import pako from "pako";
-
 export function setLocalStorage(name: string, value: string, maxAge: number) {
   // Store the value and expiration time as a JSON string
   const expiresAt = Date.now() + maxAge * 1000;

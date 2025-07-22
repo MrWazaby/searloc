@@ -13,3 +13,7 @@ We use [Weblate](https://weblate.org/) for translations. If you want to help wit
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
+### Commit messages
+Please use conventional commit messages. This helps us to automatically generate a changelog and release notes.
+
+More information can be found in the [conventional commits specification](https://www.conventionalcommits.org/en/v1.0.0/).

@@ -67,6 +67,17 @@
                     <button type="submit" class="btn-save">
                         <i class="fas fa-save"></i> <span data-i18n="settings.save_btn"></span>
                     </button>
+                    
+                    <div class="settings-export-import">
+                        <button type="button" id="export-settings-btn" class="btn-export">
+                            <i class="fas fa-download"></i> <span data-i18n="settings.export_btn"></span>
+                        </button>
+                        <button type="button" id="import-settings-btn" class="btn-import">
+                            <i class="fas fa-upload"></i> <span data-i18n="settings.import_btn"></span>
+                        </button>
+                        <input type="file" id="import-settings-file" accept=".json" style="display: none;">
+                    </div>
+                    
                     <div id="settings-message" style="margin-top:12px;font-size:0.9em;"></div>
                 </form>
                 <div class="search-engine-section">

@@ -33,7 +33,14 @@
         "save_btn": "Enregistrer les paramètres",
         "saved_message": "Paramètres enregistrés avec succès.",
         "add_search_engine": "Ajouter comme moteur de recherche",
-        "retry_search_label": "Réessayer/compléter la recherche sur une autre instance (!! bang)"
+        "retry_search_label": "Réessayer/compléter la recherche sur une autre instance (!! bang)",
+        "export_btn": "Exporter les paramètres",
+        "import_btn": "Importer les paramètres",
+        "export_success": "Paramètres exportés avec succès.",
+        "export_error": "Échec de l'exportation des paramètres. Veuillez réessayer.",
+        "import_success": "Paramètres importés et appliqués avec succès.",
+        "import_error": "Échec de l'importation des paramètres. Veuillez vérifier le format du fichier.",
+        "import_invalid_file": "Veuillez sélectionner un fichier JSON valide."
     },
     "search_placeholder": "Recherche...",
     "search_engine_guide": {

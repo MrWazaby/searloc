@@ -35,6 +35,14 @@ jobs:
       - name: Install dependencies
         run: npm install --include=dev
 
+      - name: Setup Chrome for Selenium
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Generate the instances.json
+        run: npm run scrape
+
       - name: Build Node assets
         run: npm run build
 

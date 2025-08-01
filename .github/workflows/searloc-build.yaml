@@ -32,8 +32,9 @@ jobs:
         with:
           node-version: v22.x
       
-      - name: Install dependencies
+      - name: Install dependencies for scrape
         run: npm install --include=dev
+        working-directory: ./quality-checker
 
       - name: Setup Chrome for Selenium
         uses: browser-actions/setup-chrome@v1
@@ -42,6 +43,10 @@ jobs:
 
       - name: Generate the instances.json
         run: npm run scrape
+        working-directory: ./quality-checker
+
+      - name: Install dependencies
+        run: npm install --include=dev
 
       - name: Build Node assets
         run: npm run build

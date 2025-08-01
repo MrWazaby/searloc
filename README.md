@@ -7,6 +7,14 @@ To use Searloc, simply visit https://searloc.org and enter your search query.
 
 The URL for searching is `https://searloc.org/?q=%s`.
 
+If the search results is not good enough for you, you can enable (in the settings, it's off by default) and use in the `!!` bang. It will replay your search on another random instance. You can also use this feature to add elements to your search: 
+```
+first search: test
+second search: !! # will search "test" on another searxng instance 
+second search: !! !!w # will search "test" on wikipedia
+second search: !! driven development # will search "test drive development" on a random searxng instance 
+```
+
 You can also set Searloc as your default search engine in your browser. Here are the steps for popular browsers:
 
 ### Chrome
@@ -14,6 +22,9 @@ You can also set Searloc as your default search engine in your browser. Here are
 
 ### Firefox
 [Check the knowledge base](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox)
+
+## Documentation
+For more information on how to use Searloc, check out the [documentation](https://codeberg.org/wazaby/searloc/wiki).
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for information on how to contribute to Searloc.

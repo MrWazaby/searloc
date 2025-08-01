@@ -1,4 +1,5 @@
-import { getLocalStorage, setLocalStorage } from "./utils";
+import pako from "pako";
+import { getLocalStorage, setLocalStorage, urlencode, uint8ToBase64 } from "./utils";
 import { loadSettings } from "./settings";
 
 type SearxngInstance = {
@@ -21,7 +22,7 @@ const STORAGE_NAME = "searxng_instances";
 const settings = loadSettings();
 const storageMaxAgeHours = settings.instanceRefreshHours || 24;
 
-async function fetchAndStoreSearxngInstances(): Promise<{}> {
+export async function fetchAndStoreSearxngInstances(): Promise<{}> {
   // If cookie exists, return parsed value
   const storage = getLocalStorage(STORAGE_NAME);
   if (storage) {
@@ -32,7 +33,7 @@ async function fetchAndStoreSearxngInstances(): Promise<{}> {
     }
   }
 
-  const response = await fetch("https://searx.space/data/instances.json");
+  const response = await fetch("/instances.json");
   if (!response.ok) throw new Error("Failed to fetch instances.json");
 
   const data = await response.json();
@@ -61,5 +62,18 @@ async function fetchAndStoreSearxngInstances(): Promise<{}> {
   setLocalStorage(STORAGE_NAME, JSON.stringify(urlMap), storageMaxAgeHours * 3600);
   return urlMap;
 }
+ export function hashPreferences(locale: string, style: string): string {
+  const settings: Record<string, string> = {
+    locale: locale,
+    simple_style: style,
+  };
 
-export { fetchAndStoreSearxngInstances };
+  const encoded = urlencode(settings);
+  const compressed = pako.deflate(encoded); 
+
+  // Base64 encode and make it URL-safe
+  let b64 = uint8ToBase64(compressed)
+    .replace(/\+/g, "-").replace(/\//g, "_");
+
+  return b64;
+}

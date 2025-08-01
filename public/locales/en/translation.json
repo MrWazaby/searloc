@@ -17,17 +17,88 @@
         "legal": "Legal notice",
         "legal_notice": "This site is published on a personal, non-profit basis. It is hosted by IONOS, a German Internet Service Provider: IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. Searloc is not affiliated with searXNG or IONOS.",
         "privacy": "Privacy policy",
-        "privacy_text": "Searloc does not collect any personal data. Search requests are processed locally in your browser and are not sent to a server. The instances/sites you access via Searloc may collect personal data. Please consult their respective privacy policies for more information. We use localStorage to store selected instances, settings and cache bangs, but no personal data is collected or shared. Our hosting provider, IONOS, may collect anonymous usage data in accordance with its privacy policy (https://www.ionos.fr/terms-gtc/terms-privacy/). By using Searloc, you agree to these terms."
+        "privacy_text": "Searloc does not collect any personal data. Search requests are processed locally in your browser and are not sent to a server. The instances/sites you access via Searloc may collect personal data. Please consult their respective privacy policies for more information. We use localStorage to store selected instances, settings, cache bangs and the last search for retry (opt-int), but no personal data is collected or shared. Our hosting provider, IONOS, may collect anonymous usage data in accordance with its privacy policy (https://www.ionos.fr/terms-gtc/terms-privacy/). By using Searloc, you agree to these terms."
     },
     "settings": {
         "title": "Settings",
         "custom_instance_label": "Custom instances",
         "custom_instance_desc": "Add your own searXNG instances. Separate multiple entries with commas.",
         "language_label": "Language",
+        "theme_label": "Theme",
+        "theme_auto": "Auto",
+        "theme_dark": "Dark",
+        "theme_light": "Light",
         "bang_refresh_label": "Refresh bangs every (hours)",
         "instance_refresh_label": "Refresh instances every (hours)",
         "save_btn": "Save settings",
-        "saved_message": "Settings saved successfully."
+        "saved_message": "Settings saved successfully.",
+        "add_search_engine": "Add as search engine",
+        "retry_search_label": "Retry/add elements to search (!! bang)",
+        "export_btn": "Export settings",
+        "import_btn": "Import settings",
+        "export_success": "Settings exported successfully.",
+        "export_error": "Failed to export settings. Please try again.",
+        "import_success": "Settings imported and applied successfully.",
+        "import_error": "Failed to import settings. Please check the file format.",
+        "import_invalid_file": "Please select a valid JSON file."
     },
-    "search_placeholder": "Search..."
+    "search_placeholder": "Search...",
+    "search_engine_guide": {
+        "title": "How to add Searloc as search engine in",
+        "close": "Close",
+        "browser_names": {
+            "chrome": "Chrome",
+            "firefox": "Firefox",
+            "safari": "Safari",
+            "edge": "Edge",
+            "opera": "Opera",
+            "unknown": "your browser"
+        },
+        "chrome": {
+            "step1": "Open Chrome and go to Settings (⋮ > Settings)",
+            "step2": "Click on 'Search engine' in the left sidebar",
+            "step3": "Click on 'Manage search engines and site search'",
+            "step4": "Click 'Add' next to 'Site search'",
+            "step5": "Enter 'Searloc' as name, 'searloc' as shortcut, and this URL as search URL: {{baseUrl}}/?q=%s",
+            "step6": "Click 'Add' to save the search engine",
+            "step7": "Click the three dots next to 'Searloc' and select 'Make default' to set it as your default search engine"
+        },
+        "firefox": {
+            "step1": "Visit this page in Firefox",
+            "step2": "Right-click on the address bar",
+            "step3": "Select 'Add a Keyword for this Search'",
+            "step4": "Enter 'searloc' as keyword and 'Searloc' as name",
+            "step5": "Go to Firefox Settings (☰ > Settings)",
+            "step6": "Click on 'Search' in the left sidebar",
+            "step7": "In the 'Default Search Engine' dropdown, choose searloc"
+        },
+        "safari": {
+            "step1": "Safari doesn't support adding custom search engines directly",
+            "step2": "You can bookmark this page for quick access",
+            "step3": "Or use the address bar shortcut by typing the URL",
+            "step4": "Consider using Chrome or Firefox for better search engine integration",
+            "step5": "Alternatively, you can change your default search in Safari Preferences > Search, but only built-in options are available"
+        },
+        "edge": {
+            "step1": "Open Edge and go to Settings (⋯ > Settings)",
+            "step2": "Click on 'Privacy, search, and services'",
+            "step3": "Scroll down to 'Services' section and click 'Address bar and search'",
+            "step4": "Click 'Manage search engines'",
+            "step5": "Click 'Add' and enter 'Searloc' as name and this URL: {{baseUrl}}/?q=%s",
+            "step6": "Click 'Add' to save the search engine",
+            "step7": "Click the three dots next to 'Searloc' and select 'Make default' to set it as your default search engine"
+        },
+        "opera": {
+            "step1": "Open Opera and go to Settings (⋯ > Settings)",
+            "step2": "Click on 'Search engine' in the left sidebar",
+            "step3": "Click 'Manage search engines'",
+            "step4": "Click 'Add' and enter 'Searloc' as name, 'searloc' as keyword, and this URL: {{baseUrl}}/?q=%s",
+            "step5": "Click 'Add' to save the search engine",
+            "step6": "In the 'Default search engine' dropdown at the top, select 'Searloc' to make it your default"
+        },
+        "unknown": {
+            "step1": "Check your browser's settings for search engine management",
+            "step2": "Add this URL as a search engine: {{baseUrl}}/?q=%s"
+        }
+    }
 }

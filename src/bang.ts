@@ -1,8 +1,8 @@
-import { fetchAndStoreSearxngInstances } from "./searxng";
+import { fetchAndStoreSearxngInstances, hashPreferences } from "./searxng";
 import { getRandomElement, setLocalStorage, getLocalStorage } from "./utils";
 import { loadSettings } from "./settings";
 
-type Bang = {
+export type Bang = {
   s: string;
   d: string;
   t: string;
@@ -11,7 +11,9 @@ type Bang = {
   sc?: string;
 };
 
-async function fetchBangs(): Promise<Bang[]> {
+const SETTINGS = loadSettings();
+
+export async function fetchBangs(): Promise<Bang[]> {
   const bangs = getLocalStorage("bangs_json");
   if (bangs) {
     try {
@@ -21,8 +23,7 @@ async function fetchBangs(): Promise<Bang[]> {
       localStorage.removeItem("bangs_json"); // Clear corrupted data
     }
   }
-  const settings = loadSettings();
-  const storageMaxAgeHours = settings.bangRefreshHours || 24;
+  const storageMaxAgeHours = SETTINGS.bangRefreshHours || 24;
   const resp = await fetch("/bangs.json");
   if (!resp.ok) return [];
   const data = await resp.json();
@@ -38,7 +39,7 @@ async function getDefaultSearch() : Promise<{ d: string; u: string } | undefined
   }
   return {
     d: instance.replace(/^https?:\/\//, "").replace(/\/$/, ""),
-    u: instance + "search?q={{{s}}}",
+    u: instance + "search?language=all&preferences=" + hashPreferences(SETTINGS.language, SETTINGS.theme) + "&q={{{s}}}",
   }
 }
 
@@ -66,7 +67,16 @@ async function getBangredirectUrl() {
   const selectedBang = bangs.find((b) => b.t === bangCandidate) ?? await getDefaultSearch();
  
   // Remove the first bang from the query
-  const cleanQuery = query.replace(/!!\S+\s*/i, "").trim();
+  let cleanQuery = query.replace(/!!\S+\s*/i, "").trim();
+
+  // Save the last search query to localStorage
+  if (SETTINGS.retrySearch) {
+    if (query.match(/!!/i)) {
+      cleanQuery = getLocalStorage("last_search") || cleanQuery;
+    } else {
+      setLocalStorage("last_search", cleanQuery, 60 * 15);
+    }
+  }
 
   // If the query is just `!gh`, use `github.com` instead of `github.com/search?q=`
   if (cleanQuery === "")

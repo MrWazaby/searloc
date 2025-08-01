@@ -12,6 +12,9 @@ on:
       branch-id:
         required: true
         type: string
+  # Trigger automatically every 24 hours at 2:00 AM UTC
+  schedule:
+    - cron: '0 2 * * *'
 
 env:
   DEPLOYMENT_FOLDER: dist

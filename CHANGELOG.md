@@ -1,3 +1,27 @@
+## 0.3.0 (2025-08-01)
+
+### Feat
+
+- **searxng**: get instances from the custom list
+- **scraper**: add the base quality tool
+- **settings**: add import/export settings
+- **settings**: forward settings to searxng
+- **style**: add light mode
+- **retry**: improve retery, closes #47
+- **search**: add search retry (opt-in)
+- **autocomplete**: better sugestions and darkmode
+- **autocomplete**: add base autocomplete
+
+### Fix
+
+- **scrape**: fix instances output
+- **searxng**: use all default lang
+- **ci**: fix the npm command
+- **ci**: fix the scraping ci
+- **conflict**: fix errors in conflict resolution
+- **github**: do not deploy tags to IONOS
+- **autocomple**: do not load autocomplete on other pages
+
 ## 0.2.4 (2025-07-01)
 
 ### Fix

@@ -297,7 +297,8 @@ async function main() {
       instances: validInstances
     };
     
-    writeFileSync('../public/filtered-instances.json', JSON.stringify(filteredData, null, 2));
+    writeFileSync('../public/instances.json', JSON.stringify(filteredData, null, 2));
+
     console.log(`\n=== Results ===`);
     console.log(`Total instances in original data: ${Object.keys(data.instances).length}`);
     console.log(`High-quality instances (${80}%+ success rate): ${highQualityUrls.length}`);

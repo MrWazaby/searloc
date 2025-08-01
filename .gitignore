@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # instances list
-public/filtered-instances.json
+public/instances.json

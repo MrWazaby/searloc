@@ -1,0 +1,33 @@
+{
+    "nav": {
+        "search": "Sök",
+        "settings": "Inställningar",
+        "about": "Om"
+    },
+    "footer": {
+        "source": "Källkod",
+        "issue": "Rapportera ett problem",
+        "legal": "Juridisk information",
+        "instances_references": "Instansreferens",
+        "infos": "En snabb, lokal slumpgenerator för searXNG-instanser och för !!external bang-användare"
+    },
+    "about": {
+        "title": "Om",
+        "legal": "Juridisk information",
+        "legal_notice": "Denna sida är publicerad på en personlig, icke-vinstdrivande grund. Den är hostad av IONOS, en tysk internetleverantör: IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. Searloc är inte knuten till searXNG eller IONOS.",
+        "privacy": "Integritetspolicy",
+        "text": "Searloc är en snabb, lokal slumpgenerator för searXNG-instanser och för !!external bang-användare.",
+        "privacy_text": "Searloc samlar inte in någon personlig data. Sökförfrågningar behandlas lokalt i din webbläsare och skickas inte till någon server. Instanserna/sidorna som du ansluter till via Searloc kan samla in personlig data. Var god konsultera respektive integritetspolicy för mer information. Vi använder localStorage för att lagra valda instanser, inställningar och cachea bangs, men ingen personlig data samlas in eller delas. Vår hosting-leverantör, IONOS, kan samla in anonym användardata i linje med deras integritetspolicy (https://www.ionos.fr/terms-gtc/terms-privacy/). Genom att använda Searloc godkänner du dessa villkor."
+    },
+    "settings": {
+        "title": "Inställningar",
+        "custom_instance_label": "Anpassade instanser",
+        "language_label": "Språk",
+        "bang_refresh_label": "Intervall för uppdatering av bangs (timmar)",
+        "instance_refresh_label": "Intervall för uppdatering av instanser (timmar)",
+        "saved_message": "Inställningarna sparades framgångsrikt.",
+        "custom_instance_desc": "Lägg till valfria searXNG-instanser. Separera flera poster med kommatecken.",
+        "save_btn": "Spara inställningar"
+    },
+    "search_placeholder": "Sök…"
+}

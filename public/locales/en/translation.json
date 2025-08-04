@@ -42,6 +42,7 @@
         "import_error": "Failed to import settings. Please check the file format.",
         "import_invalid_file": "Please select a valid JSON file."
     },
+    "search_placeholder": "Search...",
     "search_engine_guide": {
         "title": "How to add Searloc as search engine in",
         "close": "Close",

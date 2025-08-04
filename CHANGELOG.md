@@ -1,3 +1,11 @@
+## 0.3.1 (2025-08-04)
+
+### Fix
+
+- **retry**: fix the retry regex to avoid wrong history use in bangs
+- **locale**: add missing place holder field
+- **ci**: fix the daily build
+
 ## 0.3.0 (2025-08-01)
 
 ### Feat

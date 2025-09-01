@@ -304,6 +304,11 @@ async function main() {
     console.log(`High-quality instances (${80}%+ success rate): ${highQualityUrls.length}`);
     console.log(`Instances that passed all tests: ${Object.keys(validInstances).length}`);
     console.log('Filtered instances saved to filtered-instances.json');
+
+    if (Object.keys(validInstances).length < 5) {
+      console.error('Error: Less than 5 valid instances found. Exiting with error.');
+      process.exit(1);
+    }
     
   } catch (error) {
     console.error('Script failed:', error);

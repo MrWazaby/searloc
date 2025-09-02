@@ -2,7 +2,8 @@
     "nav": {
         "search": "Search",
         "settings": "Settings",
-        "about": "About"
+        "about": "About",
+        "back_to_search": "Back to search"
     },
     "footer": {
         "infos": "A fast, local randomizer for searXNG instances and for !!external bang users",

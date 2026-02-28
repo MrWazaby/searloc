@@ -1,3 +1,10 @@
+## 0.3.2 (2026-02-28)
+
+### Fix
+
+- **instances**: fix the instances list and remove quality check
+- **ci**: do not allow bad instances.json to be generated
+
 ## 0.3.1 (2025-08-04)
 
 ### Fix

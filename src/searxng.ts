@@ -33,7 +33,7 @@ export async function fetchAndStoreSearxngInstances(): Promise<{}> {
     }
   }
 
-  const response = await fetch("/instances.json");
+  const response = await fetch("https://searx.space/data/instances.json");
   if (!response.ok) throw new Error("Failed to fetch instances.json");
 
   const data = await response.json();
